@@ -1,0 +1,21 @@
+<div class="condition-container">
+  <div *ngFor="let condition of conditions; let i = index" class="condition-row">
+    <select [(ngModel)]="condition.column" (change)="emitChanges()">
+      <option *ngFor="let col of columns" [value]="col">{{ col }}</option>
+    </select>
+
+    <select [(ngModel)]="condition.operator" (change)="emitChanges()">
+      <option value="=">=</option>
+      <option value="!=">!=</option>
+      <option value=">">&gt;</option>
+      <option value="<">&lt;</option>
+      <option value="LIKE">LIKE</option>
+    </select>
+
+    <input [(ngModel)]="condition.value" (input)="emitChanges()" placeholder="Value" />
+
+    <button type="button" (click)="removeCondition(i)">Remove</button>
+  </div>
+
+  <button type="button" class="add-button" (click)="addCondition()">+ Add Condition</button>
+</div>

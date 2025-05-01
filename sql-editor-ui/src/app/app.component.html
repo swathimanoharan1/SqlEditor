@@ -1,31 +1,44 @@
-<h2>SQL Editor</h2>
+<div class="sql-editor-container">
+  <h2>SQL Editor</h2>
 
-<app-table-selector (tableSelected)="handleTableSelected($event)">
-</app-table-selector>
+  <div class="section">
+    <app-table-selector (tableSelected)="handleTableSelected($event)">
+    </app-table-selector>
+  </div>
 
-<p *ngIf="selectedTable">
-  You selected: <strong>{{ selectedTable }}</strong>
-</p>
+  <p *ngIf="selectedTable" class="selected-table">
+    You selected: <strong>{{ selectedTable }}</strong>
+  </p>
 
-<!-- Add ColumnSelectorComponent after table is selected -->
-<app-column-selector
-  *ngIf="selectedTable"
-  [tableName]="selectedTable"
-  (columnsSelected)="handleColumnsSelected($event)"
-></app-column-selector>
+  <div class="section" *ngIf="selectedTable">
+    <app-column-selector
+      [tableName]="selectedTable"
+      (columnsSelected)="handleColumnsSelected($event)">
+    </app-column-selector>
+  </div>
 
-<!-- Add a button to generate SQL after selecting columns -->
-<button *ngIf="selectedColumns.length > 0" (click)="generateSql()">
-  Generate SQL
-</button>
+  <div class="section" *ngIf="selectedColumns.length > 0">
+    <app-condition-builder
+      [columns]="selectedColumns"
+      (conditionsChanged)="handleConditionsChanged($event)">
+    </app-condition-builder>
+  </div>
 
-<p *ngIf="loading">Loading SQL templates, please wait...</p>
+  <div class="button-container" *ngIf="selectedColumns.length > 0">
+    <button (click)="generateSql()">Generate SQL</button>
+  </div>
 
-<app-sql-template-display
-  *ngIf="!loading && sqlTemplates"
-  [tableName]="selectedTable"
-  [sqlTemplates]="sqlTemplates"
-></app-sql-template-display>
+  <p *ngIf="loading" class="loading-text">
+    Loading SQL templates, please wait...
+  </p>
 
-<app-product></app-product>
+  <div class="section" *ngIf="!loading && sqlTemplates">
+    <app-sql-template-display
+      [tableName]="selectedTable"
+      [sqlTemplates]="sqlTemplates">
+    </app-sql-template-display>
+  </div>
+</div>
 
+
+<!-- <app-product></app-product> -->

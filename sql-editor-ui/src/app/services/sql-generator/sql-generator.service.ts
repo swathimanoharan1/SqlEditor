@@ -6,16 +6,34 @@ import { Injectable } from '@angular/core';
 export class SqlGeneratorService {
   sqlTemplates: any = null;
 
-  generateSQLTemplates(tableName: string, columns: string[]) {
-    const columnList = columns.join(', ');
-    const valuesList = columns.map(() => 'value').join(', ');
-    const updateList = columns.map((col) => `${col} = value`).join(', ');
+  private buildWhereClause(conditions: any[]): string {
+    if (!conditions || conditions.length === 0) return 'WHERE condition';
+
+    const parts = conditions.map((cond) => {
+      const val = isNaN(cond.value) ? `'${cond.value}'` : cond.value;
+      return `${cond.column} ${cond.operator} ${val}`;
+    });
+
+    return 'WHERE ' + parts.join(' AND ');
+  }
+
+  generateSqlTemplates(
+    tableName: string,
+    columns: string[],
+    conditions: any[]
+  ): any {
+    const cols = columns.join(', ');
+    const where = this.buildWhereClause(conditions);
 
     return {
-      select: `SELECT ${columnList} FROM ${tableName};`,
-      insert: `INSERT INTO ${tableName} (${columnList}) VALUES (${valuesList});`,
-      update: `UPDATE ${tableName} SET ${updateList} WHERE condition;`,
-      delete: `DELETE FROM ${tableName} WHERE condition;`,
+      SELECT: `SELECT ${cols} FROM ${tableName} ${where};`,
+      INSERT: `INSERT INTO ${tableName} (${cols}) VALUES (${columns
+        .map(() => 'value')
+        .join(', ')});`,
+      UPDATE: `UPDATE ${tableName} SET ${columns
+        .map((col) => `${col} = value`)
+        .join(', ')} ${where};`,
+      DELETE: `DELETE FROM ${tableName} ${where};`,
     };
   }
 }

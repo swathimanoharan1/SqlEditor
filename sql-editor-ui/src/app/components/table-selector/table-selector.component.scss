@@ -1,0 +1,38 @@
+:host {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+  }
+  
+  select {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+  }
+  
+  select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+  }

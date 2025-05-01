@@ -3,3 +3,20 @@ AppComponent                    | Select table + show ColumnSelectorComponent + 
 TableSelectorComponent          | Select table only
 ColumnSelectorComponent         | Fetch columns + show checkboxes + send selected columns back
 SqlTemplateDisplayComponent     | Show generated SQL
+
+AppComponent = simple screen layout only
+TableSelector = handles table dropdown
+ColumnSelector = handles column checkboxes
+SqlTemplateDisplay = handles "Generate SQL" and show results
+Product = independent
+
+Add toasts (success/error)
+
+Add a download SQL file button
+
+
+Testing: Test each component to ensure seamless interaction between the table and column selection processes, and verify that SQL templates are correctly generated.
+
+UX Improvements: You could introduce loading spinners or toast notifications to notify users about the loading state when SQL is being generated.
+
+Error Handling: Ensure your components display errors gracefully if something goes wrong (e.g., no table or columns selected).

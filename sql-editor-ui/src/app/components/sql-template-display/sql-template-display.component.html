@@ -1,13 +1,21 @@
 <div *ngIf="sqlTemplates">
   <h3>Generated SQL for Table: {{ tableName }}</h3>
 
-  <div *ngFor="let template of sqlTemplates | keyvalue">
+  <div
+    *ngFor="let template of sqlTemplates | keyvalue"
+    class="sql-query-container"
+  >
     <div class="sql-template">
-      <div class="sql-header">
-        <h4>{{ template.key | uppercase }} Query:</h4>
-        <button (click)="copyToClipboard(template.value)" class="copy-btn">Copy SQL</button>
+      <div class="query-header">
+        <h4 class="query-title">{{ template.key | uppercase }} Query:</h4>
+        <button (click)="copyToClipboard(template.value)" class="copy-button">
+          Copy SQL
+        </button>
       </div>
-      <pre>{{ template.value }}</pre>
+      <div class="query-content">
+        <code>{{ template.value }}</code>
+      </div>
     </div>
   </div>
 </div>
+
