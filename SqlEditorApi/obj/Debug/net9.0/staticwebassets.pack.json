@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Sree Ram\\Desktop\\SqlEditor\\SqlEditorApi\\wwwroot\\swagger-ui\\SwaggerDark.css",
+      "PackagePath": "staticwebassets\\swagger-ui\\SwaggerDark.css"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.SqlEditorApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.SqlEditorApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.SqlEditorApi.props",
+      "PackagePath": "build\\SqlEditorApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.SqlEditorApi.props",
+      "PackagePath": "buildMultiTargeting\\SqlEditorApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.SqlEditorApi.props",
+      "PackagePath": "buildTransitive\\SqlEditorApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,13 @@
+<div *ngIf="sqlTemplates">
+  <h3>Generated SQL for Table: {{ tableName }}</h3>
+
+  <div *ngFor="let template of sqlTemplates | keyvalue">
+    <div class="sql-template">
+      <div class="sql-header">
+        <h4>{{ template.key | uppercase }} Query:</h4>
+        <button (click)="copyToClipboard(template.value)" class="copy-btn">Copy SQL</button>
+      </div>
+      <pre>{{ template.value }}</pre>
+    </div>
+  </div>
+</div>

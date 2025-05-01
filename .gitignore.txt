@@ -1,0 +1,15 @@
+# Ignore Visual Studio and build folders
+.vs/
+bin/
+obj/
+
+# Ignore Angular build artifacts
+Angular/node_modules/
+Angular/dist/
+.env
+
+# Ignore user-specific files
+*.user
+*.suo
+*.dbmdl
+*.vscode/

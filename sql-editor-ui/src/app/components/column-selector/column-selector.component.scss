@@ -1,0 +1,62 @@
+  /* Container */
+:host {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Heading */
+h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Search Input */
+.search-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Checkbox Label */
+label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+/* Checkbox Input */
+input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Select All Checkbox Styling */
+label:first-of-type {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Hover effect for labels */
+label:hover {
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  //padding: 0.3rem;
+}
+
+/* Divider */
+hr {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}

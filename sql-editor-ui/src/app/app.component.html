@@ -1,0 +1,31 @@
+<h2>SQL Editor</h2>
+
+<app-table-selector (tableSelected)="handleTableSelected($event)">
+</app-table-selector>
+
+<p *ngIf="selectedTable">
+  You selected: <strong>{{ selectedTable }}</strong>
+</p>
+
+<!-- Add ColumnSelectorComponent after table is selected -->
+<app-column-selector
+  *ngIf="selectedTable"
+  [tableName]="selectedTable"
+  (columnsSelected)="handleColumnsSelected($event)"
+></app-column-selector>
+
+<!-- Add a button to generate SQL after selecting columns -->
+<button *ngIf="selectedColumns.length > 0" (click)="generateSql()">
+  Generate SQL
+</button>
+
+<p *ngIf="loading">Loading SQL templates, please wait...</p>
+
+<app-sql-template-display
+  *ngIf="!loading && sqlTemplates"
+  [tableName]="selectedTable"
+  [sqlTemplates]="sqlTemplates"
+></app-sql-template-display>
+
+<app-product></app-product>
+

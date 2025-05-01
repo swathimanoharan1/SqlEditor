@@ -1,0 +1,141 @@
+<h1>Add Product</h1>
+<!-- Add Product Row -->
+<form #addForm="ngForm" (ngSubmit)="addProduct()">
+  <table
+    border="1"
+    cellpadding="8"
+    style="margin-top: 20px; width: 100%; border-collapse: collapse"
+  >
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Category</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input
+            type="text"
+            name="name"
+            [(ngModel)]="newProduct.name"
+            required
+          />
+        </td>
+        <td>
+          <input
+            type="number"
+            name="price"
+            [(ngModel)]="newProduct.price"
+            required
+          />
+        </td>
+        <td>
+          <input
+            type="number"
+            name="stock"
+            [(ngModel)]="newProduct.stock"
+            required
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            name="category"
+            [(ngModel)]="newProduct.category"
+            required
+          />
+        </td>
+        <td>
+          <button type="submit" [disabled]="!addForm.form.valid">
+            Add Product
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+
+<!-- Edit Product Form Row -->
+<h1>Product Management</h1>
+<form #productForm="ngForm">
+  <table
+    border="1"
+    cellpadding="8"
+    style="margin-top: 20px; width: 100%; border-collapse: collapse"
+  >
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Category</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let product of products">
+        <ng-container
+          *ngIf="
+            isEditMode && editProductModel?.productId === product.productId;
+            else displayRow
+          "
+        >
+          <!-- Edit Row -->
+          <td>{{ editProductModel!.productId }}</td>
+          <td>
+            <input
+              type="text"
+              [(ngModel)]="editProductModel!.name"
+              name="editName"
+            />
+          </td>
+          <td>
+            <input
+              type="number"
+              [(ngModel)]="editProductModel!.price"
+              name="editPrice"
+            />
+          </td>
+          <td>
+            <input
+              type="number"
+              [(ngModel)]="editProductModel!.stock"
+              name="editStock"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              [(ngModel)]="editProductModel!.category"
+              name="editCategory"
+            />
+          </td>
+          <td>
+            <button type="button" (click)="updateProduct()">Save</button>
+            <button type="button" (click)="resetForm()">Cancel</button>
+          </td>
+        </ng-container>
+
+        <ng-template #displayRow>
+          <td>{{ product.productId }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.stock }}</td>
+          <td>{{ product.category }}</td>
+          <td>
+            <button type="button" (click)="editProduct(product)">Edit</button>
+            <button type="button" (click)="deleteProduct(product.productId)">
+              Delete
+            </button>
+          </td>
+        </ng-template>
+      </tr>
+    </tbody>
+  </table>
+</form>

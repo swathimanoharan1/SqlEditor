@@ -1,0 +1,75 @@
+h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: #333;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+th,
+td {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 8px 10px;
+  width: 100%;
+  height: 36px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  padding: 6px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #125ea5;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+.form-row button {
+  flex-shrink: 0;
+}

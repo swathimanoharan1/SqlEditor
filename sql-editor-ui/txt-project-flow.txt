@@ -1,0 +1,5 @@
+Component                       | Responsibility
+AppComponent                    | Select table + show ColumnSelectorComponent + show SQL results
+TableSelectorComponent          | Select table only
+ColumnSelectorComponent         | Fetch columns + show checkboxes + send selected columns back
+SqlTemplateDisplayComponent     | Show generated SQL

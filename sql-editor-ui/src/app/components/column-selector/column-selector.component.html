@@ -1,0 +1,35 @@
+<div *ngIf="columns.length > 0">
+  <h3>Select Columns</h3>
+
+  <!-- 🔵 Column Search Box -->
+  <input
+    type="text"
+    [(ngModel)]="columnSearchTerm"
+    placeholder="Search columns..."
+    class="search-input"
+  />
+
+  <!-- 🔵 Select All Checkbox -->
+  <label>
+    <input
+      type="checkbox"
+      [checked]="allSelected()"
+      (change)="toggleSelectAll($event)"
+    />
+    Select All
+  </label>
+
+  <hr />
+
+  <!-- 🔵 Filtered Columns List -->
+  <div *ngFor="let column of filteredColumns()">
+    <label>
+      <input
+        type="checkbox"
+        [checked]="selectedColumns.includes(column)"
+        (change)="onCheckboxChange($event, column)"
+      />
+      {{ column }}
+    </label>
+  </div>
+</div>

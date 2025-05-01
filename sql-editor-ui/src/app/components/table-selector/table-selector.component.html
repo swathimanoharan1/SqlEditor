@@ -1,0 +1,7 @@
+<label for="tableSelect">Choose a table:</label>
+<select id="tableSelect" (change)="onSelectTable($event)">
+  <option value="">-- Select Table --</option>
+  <option *ngFor="let table of tables" [value]="table">
+    {{ table }}
+  </option>
+</select>

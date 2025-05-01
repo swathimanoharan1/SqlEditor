@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Sree Ram\\Desktop\\SqlEditor\\SqlEditorApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7A33DC84-F36C-24E6-B747-15450F77D61F}|SqlEditorApi.csproj|c:\\users\\sree ram\\desktop\\sqleditor\\sqleditorapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A33DC84-F36C-24E6-B747-15450F77D61F}|SqlEditorApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A33DC84-F36C-24E6-B747-15450F77D61F}|SqlEditorApi.csproj|c:\\users\\sree ram\\desktop\\sqleditor\\sqleditorapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A33DC84-F36C-24E6-B747-15450F77D61F}|SqlEditorApi.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A33DC84-F36C-24E6-B747-15450F77D61F}|SqlEditorApi.csproj|c:\\users\\sree ram\\desktop\\sqleditor\\sqleditorapi\\sqleditorapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7A33DC84-F36C-24E6-B747-15450F77D61F}|SqlEditorApi.csproj|solutionrelative:sqleditorapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A33DC84-F36C-24E6-B747-15450F77D61F}|SqlEditorApi.csproj|c:\\users\\sree ram\\desktop\\sqleditor\\sqleditorapi\\controllers\\sqlmetacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A33DC84-F36C-24E6-B747-15450F77D61F}|SqlEditorApi.csproj|solutionrelative:controllers\\sqlmetacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SqlEditorApi",
+              "DocumentMoniker": "C:\\Users\\Sree Ram\\Desktop\\SqlEditor\\SqlEditorApi\\SqlEditorApi.csproj",
+              "RelativeDocumentMoniker": "SqlEditorApi.csproj",
+              "ToolTip": "C:\\Users\\Sree Ram\\Desktop\\SqlEditor\\SqlEditorApi\\SqlEditorApi.csproj",
+              "RelativeToolTip": "SqlEditorApi.csproj",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-01T08:22:18.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Sree Ram\\Desktop\\SqlEditor\\SqlEditorApi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Sree Ram\\Desktop\\SqlEditor\\SqlEditorApi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAIwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T03:08:29.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Sree Ram\\Desktop\\SqlEditor\\SqlEditorApi\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Sree Ram\\Desktop\\SqlEditor\\SqlEditorApi\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAqwGsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T16:06:31.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SqlMetaController.cs",
+              "DocumentMoniker": "C:\\Users\\Sree Ram\\Desktop\\SqlEditor\\SqlEditorApi\\Controllers\\SqlMetaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SqlMetaController.cs",
+              "ToolTip": "C:\\Users\\Sree Ram\\Desktop\\SqlEditor\\SqlEditorApi\\Controllers\\SqlMetaController.cs",
+              "RelativeToolTip": "Controllers\\SqlMetaController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwDUAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T13:02:05.085Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
